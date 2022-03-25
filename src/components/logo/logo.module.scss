@@ -1,0 +1,21 @@
+@use '../../assets/scss/variables' as *;
+
+.logo {
+  cursor: default;
+  font-size: $title-mobile;
+  color: $secondary;
+  font-family: $font-en;
+  font-weight: 400;
+  display: flex;
+  gap: 3px;
+  padding-right: 30px;
+  span {
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .logo {
+    font-size: $font-normal;
+  }
+}

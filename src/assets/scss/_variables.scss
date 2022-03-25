@@ -1,0 +1,68 @@
+//colors
+$heroBg: linear-gradient(240.65deg, #1f2023 -15.04%, #313238 78.65%);
+
+$primary: rgba(37, 38, 42, 1);
+$secondary: rgba(255, 255, 255, 1);
+$accent: rgba(242, 143, 143, 1);
+$footerBg: rgba(27, 27, 27, 1);
+$gray: rgba(255, 255, 255, 0.5);
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@font-face {
+  font-family: nino-mtavruli;
+  src: url(../fonts/bpg_nino_mtavruli_normal.ttf);
+}
+
+$font-en: 'Open Sans', sans-serif;
+$font-geo: nino-mtavruli, sans-serif;
+
+//typography
+
+$font-sm: 14px;
+$font-normal: 16px;
+$font-normal-big: 18px;
+$title: 40px;
+$title-mobile: 20px;
+
+@mixin title {
+  font-family: $font-geo;
+  font-size: $title;
+  color: $secondary;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+
+@mixin underlinedLink {
+  text-decoration: underline;
+  color: $secondary;
+  font-weight: 700;
+  font-family: $font-geo;
+  font-size: $title-mobile;
+}
+
+@mixin paragraph {
+  font-size: $font-normal-big;
+  color: $secondary;
+  font-family: $font-geo;
+}
+
+//breakpoints
+
+$side-padding: 15px;
+
+$desktop: 1124px;
+$tablet: 900px;
+$mobile: 600px;
+
+@mixin content-max-width {
+  width: 100%;
+  margin: 0 auto;
+  max-width: $desktop;
+  padding-left: $side-padding;
+  padding-right: $side-padding;
+}
+
+//animation
+$fast: 150ms;
+$slow: 300ms;

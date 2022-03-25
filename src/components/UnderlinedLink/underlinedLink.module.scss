@@ -1,0 +1,9 @@
+@use '../../assets/scss/variables' as *;
+
+.link {
+  color: $secondary;
+  font-size: $font-normal-big;
+  font-family: $font-geo;
+  text-decoration: underline;
+  text-decoration-color: $secondary;
+}

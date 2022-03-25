@@ -1,0 +1,10 @@
+@use '../../assets/scss/variables' as *;
+
+.aboutMe {
+  background-color: $primary;
+
+  div > * {
+    text-transform: uppercase;
+    max-width: 80ch;
+  }
+}

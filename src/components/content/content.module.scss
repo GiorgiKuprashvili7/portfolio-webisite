@@ -1,0 +1,5 @@
+@use '../../assets/scss/variables' as *;
+
+.content_width {
+  @include content-max-width;
+}

@@ -1,0 +1,7 @@
+@use '../../assets/scss/variables' as *;
+
+.paragraph {
+  @include paragraph;
+  text-decoration: none;
+  line-height: 140%;
+}

@@ -1,0 +1,79 @@
+@use '../../assets/scss/variables' as *;
+
+.heroSection {
+  background: $heroBg;
+  position: relative;
+  overflow-x: hidden;
+}
+.decorText {
+  pointer-events: none;
+  font-size: 200px;
+  position: absolute;
+  z-index: 0;
+  top: 100px;
+  font-family: $font-geo;
+  color: rgba(255, 255, 255, 0.01);
+  transform: translateX(-50px);
+}
+.flexContainer {
+  position: relative;
+  z-index: 2;
+  min-height: 720px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .textContainer {
+    padding-right: 30px;
+    h2 {
+      cursor: default;
+      background-color: $accent;
+      color: $secondary;
+      font-weight: 400;
+      width: max-content;
+      padding: 5px 14px;
+      font-size: $font-normal;
+      border-radius: 5px;
+      font-family: $font-en;
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.line {
+  height: 4px;
+  background-color: $accent;
+  width: 100%;
+}
+
+@media screen and (max-width: $desktop) {
+  .flexContainer img {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .flexContainer {
+    padding: 110px 0 48px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .flexContainer .textContainer {
+    max-width: none;
+    margin-bottom: 40px;
+  }
+
+  .flexContainer img {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .flexContainer img {
+    align-self: center;
+    width: 90%;
+  }
+  .flexContainer .textContainer h2 {
+    font-size: 13px;
+  }
+}

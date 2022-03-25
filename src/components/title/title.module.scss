@@ -1,0 +1,17 @@
+@use '../../assets/scss/variables' as *;
+
+.title {
+  @include title;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.title span {
+  color: $accent;
+}
+
+@media screen and (max-width: $mobile) {
+  .title {
+    font-size: $title-mobile;
+  }
+}

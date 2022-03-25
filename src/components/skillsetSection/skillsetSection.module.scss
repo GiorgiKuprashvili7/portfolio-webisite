@@ -1,0 +1,29 @@
+@use '../../assets/scss/variables' as *;
+
+.section {
+  background-color: $primary;
+  padding-top: 100px;
+}
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 10px;
+  max-width: 850px;
+  .skill {
+    cursor: default;
+    color: $primary;
+    background-color: $secondary;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-family: $font-en;
+    font-weight: 600;
+    font-size: $font-normal-big;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .skillsList .skill {
+    font-size: $font-normal;
+  }
+}

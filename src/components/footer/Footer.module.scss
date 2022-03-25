@@ -1,0 +1,64 @@
+@use '../../assets/scss/variables' as *;
+
+.footer {
+  padding: 60px 0;
+  background-color: $footerBg;
+}
+
+.contactInfo {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: max-content;
+    list-style: none;
+    li {
+      a {
+        font-family: $font-en;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        &:hover * {
+          color: $accent;
+        }
+        .icon {
+          color: $secondary;
+          font-size: 30px;
+        }
+        p {
+          @include paragraph;
+          font-family: $font-en;
+        }
+      }
+    }
+  }
+}
+
+.footerDown {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 10px;
+  align-items: flex-end;
+  p {
+    font-size: $font-sm;
+    color: $gray;
+    font-family: $font-en;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .footer {
+    padding: 35px 0;
+  }
+  .contactInfo ul li a {
+    .icon {
+      font-size: 25px;
+    }
+    p {
+      font-size: $font-normal;
+    }
+  }
+}
