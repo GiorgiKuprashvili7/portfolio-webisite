@@ -1,17 +1,53 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Content from '../content/Content'
 import Title from '../title/Title'
 import classes from './Footer.module.scss'
 import { MdMail, MdPhone, MdFacebook } from 'react-icons/md'
 import { AiFillLinkedin } from 'react-icons/ai'
 import Logo from '../logo/Logo'
+import emailjs from '@emailjs/browser'
 
 const Footer = () => {
+  const form = useRef<HTMLFormElement>(null!)
+
+  const sendEmail = (e: React.BaseSyntheticEvent) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_h1912f9',
+        'template_t81181f',
+        form.current,
+        'FSC3jeJxkrXzM7IYV'
+      )
+      .then(
+        (result) => {
+          alert('შეტყობინება წარმატებით გაიგზავნა')
+        },
+        (error) => {
+          alert('შეტყობინების გაგზავნა ვერ მოხერხდა, თხოვთ სცადეთ თავიდან')
+        }
+      )
+    e.target.reset()
+  }
+
   return (
     <footer id="footer" className={classes.footer}>
       <Content>
+        <Title>საკონტაქტო ინფორმაცია</Title>
         <div className={classes.contactInfo}>
-          <Title>საკონტაქტო ინფორმაცია</Title>
+          <form ref={form} onSubmit={sendEmail}>
+            <label>სახელი</label>
+            <input required type="text" name="name" />
+            <label>ელ.ფოსტა</label>
+            <input required type="email" name="email" />
+            <label>სათაური</label>
+            <input required type="text" name="subject" />
+            <label>შეტყობინება</label>
+            <textarea required name="message" />
+            <button type="submit">შეტყობინების გაგზავნა</button>
+          </form>
+
           <ul>
             <li>
               <a

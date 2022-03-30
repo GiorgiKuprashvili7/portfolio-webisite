@@ -6,7 +6,51 @@
 }
 
 .contactInfo {
+  display: flex;
+  gap: 100px;
+
+  form {
+    width: 100%;
+    max-width: 500px;
+    color: $secondary;
+    label {
+      display: block;
+      font-family: $font-geo;
+    }
+    input {
+      margin-bottom: 15px;
+      width: 100%;
+      display: block;
+      padding: 5px;
+      outline: none;
+      font-family: $font-en;
+    }
+    textarea {
+      margin-bottom: 20px;
+      padding: 5px;
+      width: 100%;
+      display: block;
+      resize: none;
+      outline: none;
+      height: 100px;
+      font-family: $font-en;
+    }
+
+    button {
+      font-family: $font-geo;
+      padding: 14px 15px 8px 15px;
+      font-size: $font-normal;
+      border: none;
+      background-color: $accent;
+      color: $secondary;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($accent, 5);
+      }
+    }
+  }
   ul {
+    padding-top: 14px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -52,6 +96,10 @@
 @media screen and (max-width: $tablet) {
   .footer {
     padding: 35px 0;
+  }
+  .contactInfo {
+    flex-direction: column-reverse;
+    gap: 40px;
   }
   .contactInfo ul li a {
     .icon {

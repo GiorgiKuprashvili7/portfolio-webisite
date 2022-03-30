@@ -6,14 +6,28 @@ import classes from './projects.module.scss'
 import img1 from '../../assets/images/1.jpg'
 import img2 from '../../assets/images/2.jpg'
 import img3 from '../../assets/images/3.jpg'
+import img4 from '../../assets/images/4.jpg'
+import img5 from '../../assets/images/5.jpg'
 import UnderlinedLink from '../UnderlinedLink/UnderlinedLink'
 import Paragraph from '../paragraph/Paragraph'
 
 let projects = [
   {
+    name: 'OMDB.GE',
+    img: img5,
+    technologies: [
+      'React',
+      'React-router',
+      'React-query',
+      'TypeScript',
+      'SCSS',
+    ],
+    link: 'https://george-kuprashvili-omdb.netlify.app',
+  },
+  {
     name: 'Viramein',
     img: img1,
-    technologies: ['React', 'React Router', 'TypeScript', 'SCSS'],
+    technologies: ['React', 'React-router', 'TypeScript', 'SCSS'],
     link: 'https://george-kuprashvili-viramein.netlify.app/',
   },
   {
@@ -27,6 +41,12 @@ let projects = [
     img: img3,
     technologies: ['React', 'TypeScript', 'SCSS'],
     link: 'https://george-kuprashvili-gummyroll.netlify.app/',
+  },
+  {
+    name: 'V&V coffee',
+    img: img4,
+    technologies: ['React', 'TypeScript', 'SCSS'],
+    link: 'https://georgekuprashvili-vv-coffee.netlify.app',
   },
 ]
 

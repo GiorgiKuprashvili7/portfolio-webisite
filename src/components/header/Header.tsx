@@ -71,11 +71,6 @@ const Header = () => {
           <nav className={`${classes.nav} ${open && classes.nav_active}`}>
             <ul className={classes.navigation}>
               <li>
-                <a onClick={() => setOpen(false)} href="#home">
-                  მავარი
-                </a>
-              </li>
-              <li>
                 <a onClick={() => setOpen(false)} href="#skillset">
                   სკოლსეტი
                 </a>
@@ -83,6 +78,11 @@ const Header = () => {
               <li>
                 <a onClick={() => setOpen(false)} href="#projects">
                   პროექტები
+                </a>
+              </li>
+              <li>
+                <a onClick={() => setOpen(false)} href="#footer">
+                  კონტაქტი
                 </a>
               </li>
             </ul>
