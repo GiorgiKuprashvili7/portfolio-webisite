@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Content from '../content/Content'
 import Paragraph from '../paragraph/Paragraph'
 import Title from '../title/Title'
 import classes from './aboutMe.module.scss'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const AboutMe = () => {
+  useEffect(() => {
+    Aos.init({
+      startEvent: 'DOMContentLoaded',
+      mirror: false,
+      delay: 50,
+      offset: 150,
+      duration: 400,
+      once: true,
+    })
+  }, [])
+
   return (
     <section className={classes.aboutMe}>
       <Content>
-        <div>
+        <div data-aos="fade-up">
           <Title>ჩემს შესახებ</Title>
           <Paragraph>
             2021 წელს, როდესაც ყველანი იზოლაციაში ვიყავით, გადავწყვიტე

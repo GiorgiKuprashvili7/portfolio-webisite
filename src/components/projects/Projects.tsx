@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Content from '../content/Content'
 import Title from '../title/Title'
 import classes from './projects.module.scss'
-
 import img1 from '../../assets/images/1.jpg'
 import img2 from '../../assets/images/2.jpg'
 import img3 from '../../assets/images/3.jpg'
 import img4 from '../../assets/images/4.jpg'
 import img5 from '../../assets/images/5.jpg'
-import UnderlinedLink from '../UnderlinedLink/UnderlinedLink'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import Paragraph from '../paragraph/Paragraph'
 
 let projects = [
@@ -51,14 +51,30 @@ let projects = [
 ]
 
 const Projects = () => {
+  useEffect(() => {
+    Aos.init({
+      startEvent: 'DOMContentLoaded',
+      mirror: false,
+      offset: 150,
+      duration: 500,
+      once: true,
+    })
+  }, [])
   return (
     <section id="projects" className={classes.section}>
       <Content>
-        <Title>პერსონალური პროექტები</Title>
+        <div data-aos="fade-up">
+          <Title>პერსონალური პროექტები</Title>
+        </div>
         <div className={classes.cardsContainer}>
           {projects.map((project, index) => {
             return (
-              <div className={classes.card} key={index}>
+              <div
+                className={classes.card}
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={index % 2 === 0 ? '50' : '100'}
+              >
                 <a
                   className={classes.linkWrapper}
                   href={project.link}
@@ -79,6 +95,8 @@ const Projects = () => {
             )
           })}
           <a
+            data-aos="fade-up"
+            data-aos-delay="100"
             target="_blank"
             rel="noreferrer"
             className={classes.seeAllProject}
