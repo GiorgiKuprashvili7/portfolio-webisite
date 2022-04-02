@@ -72,7 +72,7 @@ const Header = () => {
             <ul className={classes.navigation}>
               <li>
                 <a onClick={() => setOpen(false)} href="#skillset">
-                  სკოლსეტი
+                  სკილსეტი
                 </a>
               </li>
               <li>

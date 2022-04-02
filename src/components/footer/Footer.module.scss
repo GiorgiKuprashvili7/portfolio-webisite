@@ -16,16 +16,21 @@
     label {
       display: block;
       font-family: $font-geo;
+      padding-bottom: 3px;
     }
     input {
+      border-radius: 3px;
       margin-bottom: 15px;
+      border: none;
       width: 100%;
       display: block;
-      padding: 5px;
+      padding: 8px 5px;
       outline: none;
       font-family: $font-en;
     }
     textarea {
+      border-radius: 3px;
+      border: none;
       margin-bottom: 20px;
       padding: 5px;
       width: 100%;
@@ -37,6 +42,7 @@
     }
 
     button {
+      border-radius: 3px;
       font-family: $font-geo;
       padding: 14px 15px 8px 15px;
       font-size: $font-normal;
